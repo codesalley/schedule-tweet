@@ -15,6 +15,10 @@
       </list>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/models/user.rb" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/config/routes.rb" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1ovwGxzGNyK0xXqxTQyGq1IPmif" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,7 +36,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -49,7 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614180289424</updated>
       <workItem from="1614180297780" duration="80000" />
-      <workItem from="1614180415637" duration="4007000" />
+      <workItem from="1614180415637" duration="14397000" />
     </task>
     <servers />
   </component>
