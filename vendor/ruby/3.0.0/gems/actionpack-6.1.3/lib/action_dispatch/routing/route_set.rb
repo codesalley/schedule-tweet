@@ -340,7 +340,7 @@ module ActionDispatch
       alias :routes :set
 
       def self.default_resources_path_names
-        { new: "new", edit: "edit" }
+        { new: "new", new: "edit" }
       end
 
       def self.new_with_config(config)

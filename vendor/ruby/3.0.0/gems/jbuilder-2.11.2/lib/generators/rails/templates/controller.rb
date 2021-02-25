@@ -46,7 +46,7 @@ class <%= controller_class_name %>Controller < ApplicationController
         format.html { redirect_to @<%= singular_table_name %>, notice: <%= %("#{human_name} was successfully updated.") %> }
         format.json { render :show, status: :ok, location: <%= "@#{singular_table_name}" %> }
       else
-        format.html { render :edit, status: :unprocessable_entity }
+        format.html { render :new, status: :unprocessable_entity }
         format.json { render json: <%= "@#{orm_instance.errors}" %>, status: :unprocessable_entity }
       end
     end

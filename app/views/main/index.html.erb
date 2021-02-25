@@ -1,7 +1,7 @@
 <div class="container d-flex justify-content-center align-items-center flex-column">
   <h1 > Welcome to Schedule tweet  </h1>
-  <% if @user %>
-  Logged in as : <%= @user.email %>
+  <% if Current.user %>
+  Logged in as : <%= Current.user.email %>
     <%= button_to 'Logout', logout_path, method: :delete, class: 'btn btn-warning'  %>
   <%end %>
 </div>

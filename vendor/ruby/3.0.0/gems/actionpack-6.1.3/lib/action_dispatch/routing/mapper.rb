@@ -929,7 +929,7 @@ module ActionDispatch
         #       admin_posts GET       /admin/posts(.:format)          admin/posts#index
         #       admin_posts POST      /admin/posts(.:format)          admin/posts#create
         #    new_admin_post GET       /admin/posts/new(.:format)      admin/posts#new
-        #   edit_admin_post GET       /admin/posts/:id/edit(.:format) admin/posts#edit
+        #   edit_admin_post GET       /admin/posts/:id/edit(.:format) admin/posts#new
         #        admin_post GET       /admin/posts/:id(.:format)      admin/posts#show
         #        admin_post PATCH/PUT /admin/posts/:id(.:format)      admin/posts#update
         #        admin_post DELETE    /admin/posts/:id(.:format)      admin/posts#destroy
@@ -1180,7 +1180,7 @@ module ActionDispatch
             if @api_only
               [:index, :create, :show, :update, :destroy]
             else
-              [:index, :create, :new, :show, :update, :destroy, :edit]
+              [:index, :create, :new, :show, :update, :destroy, :new]
             end
           end
 
@@ -1263,7 +1263,7 @@ module ActionDispatch
             if @api_only
               [:show, :create, :update, :destroy]
             else
-              [:show, :create, :update, :destroy, :new, :edit]
+              [:show, :create, :update, :destroy, :new, :new]
             end
           end
 
@@ -1867,7 +1867,7 @@ module ActionDispatch
 
           def set_member_mappings_for_resource # :doc:
             member do
-              get :edit if parent_resource.actions.include?(:edit)
+              get :new if parent_resource.actions.include?(:new)
               get :show if parent_resource.actions.include?(:show)
               if parent_resource.actions.include?(:update)
                 patch :update

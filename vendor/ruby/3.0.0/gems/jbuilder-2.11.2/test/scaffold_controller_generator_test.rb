@@ -24,7 +24,7 @@ class ScaffoldControllerGeneratorTest < Rails::Generators::TestCase
         assert_match %r{@post = Post\.new}, m
       end
 
-      assert_instance_method :edit, content do |m|
+      assert_instance_method :new, content do |m|
         assert m.blank?
       end
 
