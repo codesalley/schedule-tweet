@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <%= link_to 'Home', root_path, class: 'nav-link active' %>
+          <%= link_to 'Tweets', tweets_path, class: 'nav-link active' %>
         </li>
         <li class="nav-item">
           <%= link_to 'About', about_path, class: 'nav-link' %>
@@ -16,8 +16,8 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-3 d-flex align-items-center">
         <% if Current.user %>
 
-          <%= link_to Current.user.email.split('@')[0].capitalize,  password_path , class: 'text-decoration-none text-black-50' %>
-
+          <%= link_to Current.user.email.split('@')[0].capitalize,  root_path , class: 'text-decoration-none text-black-50' %>
+            <%= link_to 'twitter', twitter_accounts_path , class: 'btn btn-primary mx-2 text-black-50'%>
           <%= button_to 'Logout', logout_path, method: :delete, class: 'btn btn-warning mx-2 text-black-50' %>
         <% else %>
           <%= link_to 'Log In', sign_in_path, class: 'btn btn-primary mx-2 text-black-50' %>

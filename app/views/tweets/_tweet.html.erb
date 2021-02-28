@@ -1,0 +1,32 @@
+<div class="card my-2">
+  <div class="card-header">
+    Tweet <%= tweet.id %>
+  </div>
+  <div class="card-body d-flex justify-content-between">
+    <blockquote class="blockquote mb-0">
+      <p><%= tweet.body %></p>
+      <footer class="blockquote-footer px-1 gap-1"><%= tweet.twitter_account[:name] %>
+
+
+        <% if tweet.published? %>
+
+          <%= link_to 'view tweet', "https://twitter.com/#{tweet.twitter_account.username}/status/#{tweet.tweet_id}" %>
+        <% else %>
+          <cite class="px-2" title="scheduled time ">Scheduled
+            time:  <%= tweet.publish_at.to_formatted_s(:short) %></cite>
+          <cite class="px-2"> edit tweet
+          </cite> </footer>
+<%= link_to 'edit', new_tweet_path(tweet) %>
+        <% end %>
+        </blockquote>
+    <p> <%= tweet.tweet_id %></p>
+
+    <button type="button" class="btn-close" aria-label="Close">
+      <% link_to @tweet %> </button>
+
+
+  </div>
+</div>
+
+
+

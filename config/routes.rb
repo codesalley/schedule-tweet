@@ -16,6 +16,16 @@ Rails.application.routes.draw do
   get 'password/reset/edit', to: 'password_reset#edit'
   patch 'password/reset/edit', to: 'password_reset#update'
 
+  get '/auth/twitter/callback' , to: 'omniauth_callbacks#twitter'
+
+  resources :twitter_accounts
+
+  resources :tweets
+
+  resources :king, only: [:edit, :new]
+
+
+
   delete 'logout', to: 'session#destroy'
   root to: 'main#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
